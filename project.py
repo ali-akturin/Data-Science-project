@@ -11,8 +11,9 @@ st.write("""
 Shown are the stock closing price and volume of Netflix!
 
 """)
-
-tickerSymbol = 'NFLX'
+tickers = ['NFLX', 'GOOGL', 'MSFT']
+ticker = st.radio('Tickers', tickers)
+tickerSymbol = tickers
 
 tickerData = yf.Ticker(tickerSymbol)
 
